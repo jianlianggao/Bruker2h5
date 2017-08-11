@@ -28,4 +28,4 @@ if(!("inputData" %in% names(opt))) {
 
 
 ## Run Bruker2h5
-readBrukerZip_h5(BrukerZippedFile=opt$inputData, outputFilename=opt$output)
+bruker2h5(BrukerZippedFile=opt$inputData, outputFilename=opt$output)
