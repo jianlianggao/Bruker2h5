@@ -179,6 +179,7 @@ bruker2h5<-function(BrukerZippedFile, outputFilename)
   colnames(sa)<- snam
   warnRead<-options(warn = warnDef)
   #library(h5)
+  cat("start saving into .h5 file....\n")
   nmrfile<-h5file(outputFilename)
   nmrfile["nmr/data"]<-sa
   nmrfile["nmr/meta"]<-snam

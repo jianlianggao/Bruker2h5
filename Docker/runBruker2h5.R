@@ -12,7 +12,7 @@ option_list <- list(
                help="zipped Bruker NMR raw data."),
    make_option(c("-o", "--output"), 
                help="output .h5 file", 
-               default = getwd()),
+               default = getwd())
 )
 
 # get command line options, if help option encountered print help and exit,
@@ -26,6 +26,17 @@ if(!("inputData" %in% names(opt))) {
   q(status = 1,save = "no")
 }
 
+cat(opt$inputData)
+cat("\n")
+cat(class(opt$inputData))
+cat("\n")
+cat(opt$output)
+cat("\n")
+cat(class(opt$output))
+cat("\n")
 
 ## Run Bruker2h5
+library(h5)
+library(bruker2h5)
+cat("start converting....\n")
 bruker2h5(BrukerZippedFile=opt$inputData, outputFilename=opt$output)
