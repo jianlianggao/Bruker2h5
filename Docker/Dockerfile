@@ -16,4 +16,4 @@ ADD runBruker2h5.R /usr/local/bin
 RUN chmod 0755 /usr/local/bin/runBruker2h5.R
 
 # Define entry point, useful for generale use
-ENTRYPOINT ["runBruker2h5.R"]
+ENTRYPOINT ["R","runBruker2h5.R"]

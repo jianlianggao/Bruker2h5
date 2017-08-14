@@ -1,4 +1,4 @@
-#!/usr/bin/env Rscript
+#!/usr/bin/Rscript
 
 ## import optparse library
 suppressPackageStartupMessages(library("optparse"))
@@ -20,11 +20,11 @@ option_list <- list(
 parser <- OptionParser(option_list=option_list)
 opt <- parse_args(parser)
 
-if(!("inputData" %in% names(opt))) {
-  print("no input argument given!")
-  print_help(parser)
-  q(status = 1,save = "no")
-}
+#if(!("inputData" %in% names(opt))) {
+#  print("no input argument given!")
+#  print_help(parser)
+#  q(status = 1,save = "no")
+#}
 
 cat(opt$inputData)
 cat("\n")
