@@ -177,13 +177,17 @@ bruker2h5<-function(BrukerZippedFile, outputFilename)
   #cat("\n")
   #cat(dim(sa))
   colnames(sa)<- snam
-  warnRead<-options(warn = warnDef)
+  #warnRead<-options(warn = warnDef)
   #library(h5)
   cat("start saving into .h5 file....\n")
   nmrfile<-h5file(outputFilename)
+  cat(".h5 file is initiated \n")
   nmrfile["nmr/data"]<-sa
+  cat("data is saved. \n")
   nmrfile["nmr/meta"]<-snam
+  cat("title info is saved. \n")
   h5close(nmrfile)
+  cat(".h5 file is saved. \n")
   
   if (length(unzipfile)>0)
   {
