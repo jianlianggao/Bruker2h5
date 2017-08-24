@@ -15,5 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends r-base r-base-d
 ADD runBruker2h5.R /usr/local/bin
 RUN chmod 0755 /usr/local/bin/runBruker2h5.R
 
+ADD runTest1.sh /usr/local/bin
+RUN chmod 0755 /usr/local/bin/runTest1.sh
+
+
 # Define entry point, useful for generale use
-ENTRYPOINT ["R","runBruker2h5.R"]
+ENTRYPOINT ["runTest1.sh"]
