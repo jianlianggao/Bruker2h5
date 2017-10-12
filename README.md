@@ -1,6 +1,10 @@
 # Bruker2h5
 Convert zipped Bruker NMR raw data into hdf (.h5 ) file
 
+This is standalone run version. 
+
+For Docker version, please go to master branch.
+
 # Requirements
 R version is >=3.2 (h5 package does not support R < 3.2)
 
