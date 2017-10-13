@@ -172,13 +172,8 @@ bruker2h5<-function(BrukerZippedFile, outputFilename)
     }
   }
   snam <- cbind("ppm", snam)
-  #sa <- cbind(ppm,sa)
-  #cat(dim(snam))
-  #cat("\n")
-  #cat(dim(sa))
   colnames(sa)<- snam
-  #warnRead<-options(warn = warnDef)
-  #library(h5)
+  
   cat("start saving into .h5 file....\n")
   nmrfile<-h5file(outputFilename)
   cat(".h5 file is initiated \n")
